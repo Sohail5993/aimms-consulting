@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimms Consulting | Strategic Intelligence Engine</title>
+    <style>
+        :root {
+            --primary-blue: #0A3D91;
+            --accent-gold: #C9A227;
+            --dark-navy: #071D49;
+            --light-bg: #F8FAFC;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            height: 48px;
+            width: auto;
+        }
+
+        .brand-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .btn-cta {
+            background-color: var(--primary-blue);
+            color: #ffffff !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+            color: #ffffff;
+            padding: 6rem 5% 5rem 5%;
+            text-align: center;
+        }
+
+        .hero-tagline {
+    font-size: 2.8rem;               /* Increased font size for high impact */
+    font-style: italic;              /* Italicized style */
+    font-weight: 800;                /* Extra bold for sharp readability */
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Vibrant, metallic gold gradient fill */
+    background: linear-gradient(180deg, #FFE57F 0%, #FFC107 50%, #D4A017 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Soft drop shadow to increase pop against dark navy */
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.45));
+}
+
+        /* Framework Section */
+        .framework-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .grid-8 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .lens-card {
+            background: #ffffff;
+            border-top: 4px solid var(--primary-blue);
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .lens-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-top-color: var(--accent-gold);
+        }
+
+        .lens-number {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .lens-title {
+            font-size: 1.15rem;
+            color: var(--dark-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-bar {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+
+        .contact-item a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <a href="#" class="logo-container">
+            <img src="AIMMS_AC_Logo_Transparent-1.jpg" alt="Aimms Consulting Logo">
+            <span class="brand-title">AIMMS CONSULTING</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#framework">Framework</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact" class="btn-cta">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+    <div class="hero-tagline">
+        Let's Color The<br>Daring Dreams<br>Together
+    </div>
+    <h1>AIMMS Strategic Intelligence Engine</h1>
+    <p>30+ years of operational excellence combined with deep semantic analytics to scale high-ownership ventures.</p>
+</header>
+
+    <!-- The Eight-Lens Framework Grid -->
+    <section id="framework" class="framework-section">
+        <div class="section-header">
+            <h2>The Eight-Lens Framework</h2>
+            <p>Our proprietary diagnostic methodology for end-to-end strategic transformation.</p>
+        </div>
+        <div class="grid-8">
+            <div class="lens-card">
+                <div class="lens-number">Lens 01</div>
+                <h3 class="lens-title">Semantic BI Analyst</h3>
+                <p>Translating complex, unstructured operational data into executive-ready strategic models.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 02</div>
+                <h3 class="lens-title">Epistemic Rigor</h3>
+                <p>Statistical validity analysis ensuring data-backed decision frameworks under uncertainty.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 03</div>
+                <h3 class="lens-title">Cognitive Bias Analysis</h3>
+                <p>Mitigating strategic blind spots and behavioral fallacies in leadership planning.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 04</div>
+                <h3 class="lens-title">Strategic Differentiation</h3>
+                <p>Crafting defensible market positioning and high-value competitive moats.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 05</div>
+                <h3 class="lens-title">Mariana Trench Research</h3>
+                <p>Exhaustive, first-principles market intelligence across complex supply sectors.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 06</div>
+                <h3 class="lens-title">Pre-Mortem Intelligence</h3>
+                <p>Foresighted risk modeling to eliminate points of failure before capital allocation.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 07</div>
+                <h3 class="lens-title">Strategic Management</h3>
+                <p>Cross-functional execution alignment across sales, marketing, and supply chains.</p>
+            </div>
+            <div class="lens-card">
+                <div class="lens-number">Lens 08</div>
+                <h3 class="lens-title">Mount Everest Growth</h3>
+                <p>Scaling commercial business development from zero to market leadership.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Banner -->
+    <section id="contact" class="contact-bar">
+        <h2>Start a Strategic Engagement</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span>Phone:</span>
+                <a href="tel:+923004984892">+92 300 4984892</a> | <a href="tel:+923248400028">+92 324 8400028</a>
+            </div>
+            <div class="contact-item">
+                <span>Email:</span>
+                <a href="mailto:aimmsconsulting@gmail.com">aimmsconsulting@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span>LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/aimms-consulting-35895439" target="_blank">Aimms Consulting</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Aimms Consulting. Designed for Executive Growth.
+    </footer>
+
+</body>
+</html>
