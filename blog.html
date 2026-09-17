@@ -49,46 +49,7 @@
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
   @media (max-width:640px){.wrap{padding:0 20px;}}
 
-  /* ---------- Depth Gauge (signature element) ---------- */
-  .gauge-rail{
-    position:fixed;
-    left:36px;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:linear-gradient(to bottom, var(--amber-fill) 0%, var(--line) 18%, var(--line) 82%, var(--coral) 100%);
-    z-index:5;
-    display:none;
-  }
-  @media (min-width:980px){ .gauge-rail{display:block;} }
-  .gauge-marker{
-    position:absolute;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:11px; height:11px;
-    border-radius:50%;
-    background:var(--ink);
-    box-shadow:0 0 0 4px rgba(20,35,63,0.12);
-    transition:top .25s ease-out;
-  }
-  .gauge-readout{
-    position:absolute;
-    left:22px;
-    top:0;
-    transform:translateY(-50%);
-    z-index:5;
-    font-size:11px;
-    color:var(--slate);
-    white-space:nowrap;
-    background:var(--paper);
-    border:1px solid var(--line);
-    box-shadow:0 2px 10px rgba(20,35,63,0.08);
-    padding:7px 12px;
-    border-radius:3px;
-    transition:top .25s ease-out;
-    pointer-events:none;
-  }
-  .gauge-readout .val{color:var(--ink); font-size:13px; display:block; margin-bottom:2px;}
+  
 
   /* ---------- Nav ---------- */
   header{
@@ -381,13 +342,7 @@ p{text-align:justify; text-justify:inter-word; hyphens:auto;}
 </head>
 <body>
 
-<div class="gauge-rail">
-  <div class="gauge-marker" id="gaugeMarker"></div>
-  <div class="gauge-readout" id="gaugeReadout">
-    <span class="val mono" id="gaugeVal">+8,849 m</span>
-    <span id="gaugeLabel">SUMMIT VANTAGE</span>
-  </div>
-</div>
+
 
 <header>
   <nav class="wrap">
@@ -539,49 +494,7 @@ p{text-align:justify; text-justify:inter-word; hyphens:auto;}
   <p>Strategy · BD Growth · Semantic BI · Epistemic Rigor · Brand Differentiation · Cognitive Bias · Pre-Mortem · Market Research</p>
 </footer>
 
-<script>
 
-
-  (function(){
-    var marker = document.getElementById('gaugeMarker');
-    var readout = document.getElementById('gaugeReadout');
-    var readoutVal = document.getElementById('gaugeVal');
-    var readoutLabel = document.getElementById('gaugeLabel');
-    if(!marker) return;
-
-    var readings = [
-      {label:'SUMMIT VANTAGE — STRATEGY', value:'+8,849 m'},
-      {label:'ASCENT — BD GROWTH', value:'+7,000 m'},
-      {label:'SURFACE SIGNAL — SEMANTIC BI', value:'0 m'},
-      {label:'SUNLIT ZONE — EPISTEMIC RIGOR', value:'-300 m'},
-      {label:'TWILIGHT ZONE — BRAND', value:'-1,200 m'},
-      {label:'MIDNIGHT ZONE — COGNITIVE BIAS', value:'-2,000 m'},
-      {label:'ABYSSAL ZONE — PRE-MORTEM', value:'-4,000 m'},
-      {label:'CHALLENGER DEEP — MARKET', value:'-10,935 m'}
-    ];
-
-    function update(){
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      var progress = docHeight > 0 ? window.scrollY / docHeight : 0;
-      progress = Math.min(Math.max(progress, 0), 1);
-      var rail = document.querySelector('.gauge-rail');
-      var railHeight = rail ? rail.getBoundingClientRect().height : window.innerHeight;
-      var topPos = progress * railHeight;
-      topPos = Math.min(Math.max(topPos, 24), railHeight - 24);
-      marker.style.top = topPos + 'px';
-      if(readout) readout.style.top = topPos + 'px';
-
-      var idx = Math.min(readings.length - 1, Math.floor(progress * readings.length));
-      readoutVal.textContent = readings[idx].value;
-      readoutLabel.textContent = readings[idx].label;
-    }
-    window.addEventListener('scroll', update, {passive:true});
-    window.addEventListener('resize', update);
-    update();
-  })();
-
-
-</script>
 
 </body>
 </html>
