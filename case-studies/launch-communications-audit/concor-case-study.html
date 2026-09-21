@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Single Voice That Saved a Brand — Concor Case Study | AIMMS Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1F44;
+    --navy-light: #14315f;
+    --amber: #F0A500;
+    --coral: #FF6F59;
+    --paper: #FBF9F5;
+    --ink: #1C2430;
+    --muted: #5B6472;
+    --line: #E4E0D8;
+    font-family: 'Liberation Sans', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body { font-family: 'Liberation Sans', Arial, sans-serif; line-height: 1.7; font-size: 1.12rem; }
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    color: var(--navy);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  a { color: var(--navy); }
+
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 65%, #1c3d6e 100%);
+    color: #fff;
+    padding: 72px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,165,0,0.35), transparent 70%);
+  }
+  .hero-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 1; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--amber);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4.6vw, 3.1rem);
+    margin: 0 0 18px;
+    line-height: 1.15;
+  }
+  .hero p.lede {
+    color: #D8DEEA;
+    font-size: 1.22rem;
+    max-width: 640px;
+    margin: 0 0 28px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 24px;
+  }
+  .stat { min-width: 140px; }
+  .stat .num {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--amber);
+    font-weight: 700;
+    display: block;
+  }
+  .stat .label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #B9C2D6;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  main { max-width: 880px; margin: 0 auto; padding: 56px 24px 100px; }
+
+  .section { margin-bottom: 52px; }
+  .section-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--coral);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .section h2 {
+    font-size: 1.85rem;
+    margin: 0 0 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--line);
+  }
+  .section p { color: var(--ink); font-size: 1.14rem; }
+  .section ul { padding-left: 22px; font-size: 1.14rem; }
+  .section li { margin-bottom: 8px; }
+
+  .callout {
+    background: #fff;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    box-shadow: 0 1px 3px rgba(10,31,68,0.06);
+  }
+  .callout .who {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .callout p { margin: 0; font-style: italic; color: var(--navy); font-size: 1.15rem; }
+
+  .actors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin: 20px 0 0;
+  }
+  .actor {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .actor .role {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .actor .name { font-weight: 700; font-size: 1.15rem; color: var(--navy); margin-top: 4px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(10,31,68,0.06);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.1rem;
+    vertical-align: top;
+  }
+  th {
+    background: var(--navy);
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 24px;
+  }
+  .tl-step {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 16px;
+    position: relative;
+    padding-bottom: 28px;
+  }
+  .tl-step:last-child { padding-bottom: 0; }
+  .tl-dot {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+  .tl-step.pivot .tl-dot { background: var(--coral); }
+  .tl-line {
+    position: absolute;
+    left: 17px; top: 34px; bottom: -28px;
+    width: 2px;
+    background: var(--line);
+  }
+  .tl-step:last-child .tl-line { display: none; }
+  .tl-content h3 { font-size: 1.25rem; font-weight: 700; margin: 4px 0 6px; }
+  .tl-content p { margin: 0; color: var(--muted); font-size: 1.1rem; }
+
+  .endorsement {
+    background: var(--navy);
+    color: #EDEFF4;
+    border-radius: 14px;
+    padding: 40px 32px;
+    margin-top: 8px;
+  }
+  .endorsement .section-tag { color: var(--amber); }
+  .endorsement h2 { color: #fff; border-bottom-color: rgba(255,255,255,0.18); }
+  .endorsement h3 { color: var(--amber); font-size: 1.3rem; font-weight: 700; margin: 0 0 6px; }
+  .endorsement p { color: #C9D0DE; font-size: 1.15rem; }
+  .issue-solution {
+    display: grid;
+    gap: 22px;
+    margin-top: 24px;
+  }
+  .is-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .is-card .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--coral);
+  }
+  .is-card .solution-tag { color: #7FD8A8; }
+  .is-card p { margin: 6px 0 0; color: #DCE1EC; font-size: 1.12rem; }
+
+  .lessons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+  }
+  .lesson-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    border-top: 3px solid var(--coral);
+  }
+  .lesson-card h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 8px; color: var(--navy); }
+  .lesson-card p { font-size: 1.08rem; color: var(--muted); margin: 0; }
+
+  footer {
+    background: var(--navy);
+    color: #B9C2D6;
+    text-align: center;
+    padding: 28px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+  }
+  footer .tag { color: var(--amber); font-weight: 700; }
+
+  @media (max-width: 560px) {
+    .hero { padding: 52px 18px 44px; }
+    main { padding: 40px 18px 70px; }
+    .endorsement { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">AIMMS Strategic Intelligence Engine — Case File</span>
+    <h1>The Single Voice That Saved a Brand</h1>
+    <p class="lede">How one Regional Sales Manager's ground-truth evidence stopped a clinically unsafe launch strategy and redirected Concor (Bisoprolol Fumarate) toward becoming a PKR 3 billion cardiovascular franchise.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">1 / 20</span><span class="label">Dissenting voice</span></div>
+      <div class="stat"><span class="num">PKR 3.0B</span><span class="label">2024 brand value</span></div>
+      <div class="stat"><span class="num">PKR 3.25B</span><span class="label">2025 projection</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <span class="section-tag">The Brand</span>
+    <h2>Setting the Scene</h2>
+    <p>Concor, a beta-blocker (Bisoprolol Fumarate), was heading into launch at Merck Pharmaceutical Pakistan (now Martin Dow Marker) with a promotional plan already built, printed, and rehearsed. The plan had one problem: it was built on a clinical misread that no one in the room was willing to name out loud.</p>
+    <div class="actors">
+      <div class="actor"><div class="role">Decision-maker</div><div class="name">Managing Director</div></div>
+      <div class="actor"><div class="role">Plan owner</div><div class="name">Marketing Manager</div></div>
+      <div class="actor"><div class="role">Field validators</div><div class="name">20 Regional Sales Managers</div></div>
+      <div class="actor"><div class="role">The dissent</div><div class="name">1 Lahore RSM</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="section-tag">01 — The Strategic Dilemma</span>
+    <h2>A Beta-Blocker Aimed at the Wrong Target</h2>
+    <p>Marketing had identified what looked like white space: Pregnancy-Induced Hypertension (PIH), a segment dominated by Aldomet (Methyldopa), a centrally-acting alpha-2 agonist. The plan was to position Concor as the modern alternative.</p>
+    <p>The flaw sat underneath the strategy slide, not on it: Concor is a beta-blocker, and beta-blockers are largely contraindicated in pregnancy-induced hypertension. The team had picked a rival correctly on paper and a battlefield incorrectly in practice.</p>
+  </section>
+
+  <section class="section">
+    <span class="section-tag">02 — The Feedback Gap</span>
+    <h2>Groupthink in Action</h2>
+    <p>By the time feedback was requested, the promotional materials were already printed and the launch narrative was already set. Asking for validation at that stage rewards agreement, not accuracy — and that is exactly what happened: 19 of 20 Regional Sales Managers returned feedback confirming the plan, without independently checking the clinical reality with prescribers on the ground.</p>
+    <div class="callout">
+      <span class="who">Root Cause</span>
+      <p>Fear of the Marketing Head, combined with a fixed-mindset culture, converted a field-validation exercise into a rubber stamp.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="section-tag">03 — The Turning Point</span>
+    <h2>Evidence-Based Dissent</h2>
+    <p>One Regional Sales Manager, based in Lahore, did what a validation exercise is supposed to involve: he went and checked. He visited Lady Wellington Hospital and secured a formal letter from the Professor of Gynecology confirming that beta-blockers carry real risk in pregnancy hypertension — fetal bradycardia and growth restriction among them.</p>
+    <div class="timeline">
+      <div class="tl-step">
+        <div class="tl-dot">1</div><div class="tl-line"></div>
+        <div class="tl-content">
+          <h3>19 RSMs confirm the plan</h3>
+          <p>The Aldomet-rival strategy is validated on paper, unchecked in the field.</p>
+        </div>
+      </div>
+      <div class="tl-step pivot">
+        <div class="tl-dot">2</div><div class="tl-line"></div>
+        <div class="tl-content">
+          <h3>The Lahore RSM presents the Professor's letter</h3>
+          <p>Clinical evidence, not opinion, enters the room.</p>
+        </div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">3</div><div class="tl-line"></div>
+        <div class="tl-content">
+          <h3>The MD rejects the material on the spot</h3>
+          <p>"Hell with that material and burn all" — and a personal verification trip to Lahore follows the next day.</p>
+        </div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">4</div>
+        <div class="tl-content">
+          <h3>The launch is postponed and redesigned</h3>
+          <p>The strategy is rebuilt around the correct clinical segment and the correct competitive set.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="section-tag">04 — Root Cause Analysis</span>
+    <h2>Why the Strategy Failed the First Time</h2>
+    <table>
+      <thead>
+        <tr><th>Problem Area</th><th>Manifestation in the Case</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Market Research</td><td>Research was assumed rather than conducted — no one visited the actual prescriber community (gynecologists) before finalizing the plan.</td></tr>
+        <tr><td>Competitive Analysis</td><td>Aldomet was named the rival instead of the true beta-blocker competitors — Inderal (Propranolol) and Tenormin (Atenolol).</td></tr>
+        <tr><td>Organizational Culture</td><td>Fear of the Marketing Head produced fake feedback from 95% of the sales leadership.</td></tr>
+        <tr><td>Clinical Alignment</td><td>The product was designed to be promoted for a condition where it was clinically contraindicated.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <span class="section-tag">05 — The Pivot</span>
+    <h2>From Near-Failure to Cardiovascular Dominance</h2>
+    <p>Once the correct clinical lens was applied, the fix was straightforward: retarget the chronic hypertension and heart failure market, reposition against the true beta-blocker competitors, and rebuild the promotional narrative from that foundation.</p>
+    <div class="callout">
+      <span class="who">Outcome</span>
+      <p>Concor grew into a PKR 3 billion brand by 2024, with 2025 projected at PKR 3.25 billion — a launch that nearly failed on a clinical misread became a cardiovascular category leader.</p>
+    </div>
+  </section>
+
+  <div class="endorsement">
+    <span class="section-tag">AIMMS Strategic Intelligence Engine — Endorsement</span>
+    <h2>Key Issues &amp; Strategic Solutions</h2>
+    <p>Viewed through the AIMMS lens, this case is a textbook example of how launch strategy fails silently — not through bad intentions, but through validated assumptions that no one re-checks once momentum builds. Below is the issue-to-solution mapping AIMMS would apply to prevent a repeat.</p>
+    <div class="issue-solution">
+      <div class="is-card">
+        <span class="tag">Issue — "Gold Plated Higher Management"</span>
+        <p>Senior sign-off was treated as clinical validation. A Marketing Head's confidence in the plan substituted for evidence that was never actually gathered.</p>
+        <span class="tag solution-tag">Solution — Evidence-Grading Discipline</span>
+        <p>Every claim behind a launch strategy should be graded — Verified, Plausible-Unverified, or Affect-Driven-Unfalsifiable — before it reaches promotional material. A "contraindication check" against actual prescriber input would have surfaced this in week one, not after printing.</p>
+      </div>
+      <div class="is-card">
+        <span class="tag">Issue — Fake Feedback as a Structural Risk</span>
+        <p>19 of 20 field validators returned agreement, not information. The feedback loop was compromised by fear before it ever reached the MD.</p>
+        <span class="tag solution-tag">Solution — Pre-Mortem Warning Constellation</span>
+        <p>Running a structured pre-mortem — asking each RSM to argue why the launch could fail, anonymously and before materials are finalized — breaks the social pressure to conform and surfaces dissent while it is still cheap to act on.</p>
+      </div>
+      <div class="is-card">
+        <span class="tag">Issue — Misidentified Competitive Set</span>
+        <p>Aldomet was named the rival on the strength of category adjacency, not mechanism-of-action logic — a beta-blocker was benchmarked against a non-beta-blocker.</p>
+        <span class="tag solution-tag">Solution — Mariana Trench-Level Market Research</span>
+        <p>Competitive mapping needs to go beneath the therapeutic category to the pharmacological mechanism and the contraindication profile — the level of depth that would have named Inderal and Tenormin as the real competitive set from day one.</p>
+      </div>
+      <div class="is-card">
+        <span class="tag">Issue — No Psychological Safety for Dissent</span>
+        <p>The one RSM who did the work almost didn't get heard — the system depended on individual courage rather than a process built to surface inconvenient evidence.</p>
+        <span class="tag solution-tag">Solution — Institutionalized Dissent Channel</span>
+        <p>Psychological safety shouldn't rely on one person's courage. A standing "red-team" review — where at least one RSM is formally mandated to challenge the plan with field evidence before every major launch — makes this case study's hero-moment a routine safeguard instead of a lucky accident.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="margin-top:52px;">
+    <span class="section-tag">06 — Key Lessons</span>
+    <h2>For Management</h2>
+    <div class="lessons">
+      <div class="lesson-card">
+        <h3>Intellectual Honesty</h3>
+        <p>Psychological safety has to be built in — a subordinate must be able to challenge a superior with data, without professional risk.</p>
+      </div>
+      <div class="lesson-card">
+        <h3>Evidence Over Emotion</h3>
+        <p>In pharma, a single clinical letter outweighs a full deck of promotional material. Data settles the argument that opinion cannot.</p>
+      </div>
+      <div class="lesson-card">
+        <h3>Decisive Leadership</h3>
+        <p>A leader has to be willing to burn the sunk cost and pivot the moment the strategy is shown to be fundamentally flawed.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="tag">AIMMS Consulting</span> — Strategic Intelligence Engine · Case Files<br>
+  "Let's Color The Daring Dreams Together"
+</footer>
+
+</body>
+</html>
