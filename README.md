@@ -4,7 +4,7 @@ Strategic intelligence advisory site for **AIMMS Consulting**, founded by
 Sohail Bashir Butt — a pharmaceutical, nutraceutical, and diagnostics
 advisory practice based in Lahore, Pakistan.
 
-🔗 **Live site:** `https://<your-username>.github.io/<repo-name>/`
+🔗 **Live site:** `https://<Sohail5993>.github.io/<aimms-consulting>/`
 *(replace with your actual GitHub Pages URL once deployed)*
 
 ---
@@ -12,7 +12,7 @@ advisory practice based in Lahore, Pakistan.
 ## About
 
 AIMMS Consulting reads pharma, nutraceutical, and diagnostics markets the
-way a hydrographer reads the ocean floor — depth first, certainty second,
+way a hydrographer reads the ocean floor depth first, certainty second,
 opinion last. The site is built around the firm's proprietary **Strategic
 Intelligence Engine**, now expanded to eight analytical lenses.
 
