@@ -1,7 +1,7 @@
 # AIMMS Consulting
 
 Strategic intelligence advisory site for **AIMMS Consulting**, founded by
-Sohail Bashir Butt — a pharmaceutical, nutraceutical, and diagnostics
+Sohail Bashir Butt a pharmaceutical, nutraceutical, and diagnostics
 advisory practice based in Lahore, Pakistan.
 
 🔗 **Live site:** `https://Sohail5993.github.io/aimms-consulting/`
@@ -33,31 +33,31 @@ executive summit:
 | -4,000 m | Abyssal zone | **Pre-Mortem Foresighted Intelligence Analyst** |
 | -10,935 m | Challenger Deep | **Mariana Trench Level Market Researcher** |
 
-Every engagement is graded using a three-tier evidence scheme —
-**Verified / Plausible-Unverified / Affect-Driven-Unfalsifiable** — before
+Every engagement is graded using a three-tier evidence scheme
+**Verified / Plausible-Unverified / Affect-Driven-Unfalsifiable** before
 any recommendation is made.
 
 ## Pages
 
 | File | Description |
 |---|---|
-| `index.html` | Home — Hero, Framework (8 lenses), Services, Approach, Signal, Contact |
+| `index.html` | Home Hero, Framework (8 lenses), Services, Approach, Signal, Contact |
 | `projects.html` | Selected engagement archetypes across pharma, nutraceuticals, and diagnostics |
 | `case-studies.html` | Longer-form walkthroughs: Situation → Descent → Surfaced with |
-| `blog.html` | The AIMMS Insight Series — links out to LinkedIn for full posts |
+| `blog.html` | The AIMMS Insight Series links out to LinkedIn for full posts |
 | `aimms-consulting-single-page.html` | Everything above combined into one scrolling page |
 
 Only **one** of `index.html` or `aimms-consulting-single-page.html` should
-be used as the live homepage at a time — see `site-builder/` below for how
+be used as the live homepage at a time see `site-builder/` below for how
 to switch which one GitHub Pages serves.
 
 ## Design
 
-- **Palette:** navy, amber, coral — matching the AIMMS brand
+- **Palette:** navy, amber, coral matching the AIMMS brand
 - **Type:** Fraunces (display) + IBM Plex Sans / IBM Plex Mono (body / data)
 - **Signature element:** a scroll-tracking "depth gauge" down the left rail,
   reading out the current lens as you scroll
-- Fully self-contained HTML — logo is embedded as base64, no external
+- Fully self-contained HTML logo is embedded as base64, no external
   image files or build step required to view any page
 
 ## Updating the Site
